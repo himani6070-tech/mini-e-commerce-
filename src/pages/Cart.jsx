@@ -126,7 +126,7 @@ const displayCart = JSON.parse(localStorage.getItem("data")) || [];
         </span>
 
         <span className="text-cyan-700">
-            ₹{total.toFixed(2)}
+             ₹{total.toFixed(2)}
         </span>
 
     </div>

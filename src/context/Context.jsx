@@ -56,16 +56,18 @@ function removeHandler(id){
 
 
 // 1. SUBTOTAL
-const subtotal = cart.reduce((total, item) => {
-    return total + item.price * item.qty;
-}, 0);
+
+const subtotal =cart.reduce((total,item)=>{
+    return total+item.price*item.qty;
+},0);
 
 
 // 2. SHIPPING
-const shipping = subtotal > 0 ? 99 : 0;
 
-const total = subtotal + shipping ;
+const shipping =subtotal>0?99:0;
 
+
+const total = subtotal+shipping;
 return (
     <store.Provider value={{cart,addToCart,increaseQty,decreaseQty,removeHandler,shipping,subtotal,total}}>
         {children}
